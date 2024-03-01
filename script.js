@@ -1,8 +1,8 @@
 function getComputerChoice() {
-  let randNum = Math.floor(Math.random() * 3);
-  if (randNum === 0) {
+  let randComputerChoice = Math.floor(Math.random() * 3);
+  if (randComputerChoice === 0) {
     return "rock";
-  } else if (randNum === 1) {
+  } else if (randComputerChoice === 1) {
     return "paper";
   } else {
     return "scissors";
