@@ -15,7 +15,7 @@ let computerSelection = getComputerChoice();
 let keepGoing = true;
 
 while (keepGoing) {
-  let playerChoice = prompt("Select a move (Rock / Paper / Scissors")
+  let playerChoice = prompt("Select a move (Rock / Paper / Scissors)")
   playerChoice = playerChoice.toLowerCase();
 
   if (playerChoice === "rock" || playerChoice === "paper" || playerChoice === "scissors") {
