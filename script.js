@@ -1,12 +1,16 @@
 function getComputerChoice() {
   let randComputerChoice = Math.floor(Math.random() * 3);
   if (randComputerChoice === 0) {
-    return "rock";
+    return "Rock";
   } else if (randComputerChoice === 1) {
-    return "paper";
+    return "Paper";
   } else {
-    return "scissors";
+    return "Scissors";
   }
+}
+
+function capitalizeFirstLetter(str) {
+  return str.charAt(0).toUpperCase() + str.slice(1);
 }
 
 let playerSelection;
@@ -16,9 +20,9 @@ let keepGoing = true;
 
 while (keepGoing) {
   let playerChoice = prompt("Select a move (Rock / Paper / Scissors)")
-  playerChoice = playerChoice.toLowerCase();
+  playerChoice = capitalizeFirstLetter(playerChoice);
 
-  if (playerChoice === "rock" || playerChoice === "paper" || playerChoice === "scissors") {
+  if (playerChoice === "Rock" || playerChoice === "Paper" || playerChoice === "Scissors") {
     keepGoing = false;
     playerSelection = playerChoice;
   }
