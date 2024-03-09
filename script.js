@@ -3,6 +3,7 @@ let computerSelection;
 let playerScore = 0;
 let computerScore = 0;
 
+const winner = document.querySelector("#winner");
 const menu = document.querySelector("#container");
 
 menu.addEventListener('click', (event) => {
@@ -43,6 +44,11 @@ function playRound(playerSelection, computerSelection) {
   }
 
   score.textContent = `Your score: ${playerScore} Computers score: ${computerScore}`;
+
+  if (winner.textContent === "") {
+    if (playerScore === 5) winner.textContent = "You Win!";
+    else if (computerScore === 5) winner.textContent = "You Lose!";
+  }
 }
 
 function capitalizeFirstLetter(str) {
