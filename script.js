@@ -5,7 +5,7 @@ let menu = document.querySelector("#container");
 menu.addEventListener('click', (event) => {
   playerSelection = event.target.textContent;
   playRound(playerSelection, computerSelection)
-})
+});
 
 function getComputerChoice() {
   let randComputerChoice = Math.floor(Math.random() * 3);
