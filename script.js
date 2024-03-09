@@ -20,17 +20,18 @@ function getComputerChoice() {
 
 function playRound(playerSelection, computerSelection) {
   computerSelection = getComputerChoice();
+  let result = document.querySelector("#result");
 
   if (playerSelection === computerSelection) {
-    console.log("Tie!");
+    result.textContent = "Tie!";
   } else if (playerSelection === "Rock" && computerSelection === "Scissors") {
-    console.log("You Win! " + playerSelection + " beats " + computerSelection);
+    result.textContent = "You Win! " + playerSelection + " beats " + computerSelection;
   } else if (playerSelection === "Paper" && computerSelection === "Rock") {
-    console.log("You Win! " + playerSelection + " beats " + computerSelection);
+    result.textContent = "You Win! " + playerSelection + " beats " + computerSelection;
   } else if (playerSelection === "Scissors" && computerSelection === "Paper") {
-    console.log("You Win! " + playerSelection + " beats " + computerSelection);
+    result.textContent = "You Win! " + playerSelection + " beats " + computerSelection;
   } else {
-    console.log("You Lose! " + computerSelection + " beats " + playerSelection);
+    result.textContent = "You Lose! " + computerSelection + " beats " + playerSelection;
   }
 }
 
